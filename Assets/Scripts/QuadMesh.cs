@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter)),RequireComponent(typeof(MeshRenderer))]
-public class TriangleMesh : MonoBehaviour
+public class QuadMesh : MonoBehaviour
 {
     private Mesh mesh;
 
@@ -31,7 +31,7 @@ public class TriangleMesh : MonoBehaviour
 
     private void GenerateMeshData()
     {
-        vertices = new Vector3[] { new Vector3(0,0,0), new Vector3(0, 0, 1) , new Vector3(1, 0, 0) };
-        triangles = new int[] { 0, 1, 2 };
+        vertices = new Vector3[] { new Vector3(0,0,0), new Vector3(0, 0, 1), new Vector3(1, 0, 0), new Vector3(1,0,1) };
+        triangles = new int[] { 0, 1, 2, 2, 1, 3 };
     }
 }
